@@ -19,6 +19,7 @@ var days = 0;
 
 
 function choosePic() {
+	
 	var myPix = new Array("../images/desert.jpg","../images/forest.jpg","../images/grasslands.jpg","../images/mountains.jpg","../images/plains.jpg");
 	var randomNum = Math.floor(Math.random() * myPix.length);
 	//var randomNum = 4;
