@@ -16,7 +16,6 @@ function gameScreen(ScreenNumber) {
 		})
 	})
 }		
-
 	
 function saveProfession(profession)	{	
 	fetch('/game/saveProfession/' + profession).then(function(response) {

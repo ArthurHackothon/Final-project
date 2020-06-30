@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
 app.use(express.static('public'))
-/*app.get('/', function (req, res) {
+app.get('/', function (req, res) {
 	res.sendFile('views/index.html', {root: __dirname })
-})*/
+})
 app.get('/index', function(req, res)  {
 	res.sendFile('/views/index.html', {root: __dirname })
 })
