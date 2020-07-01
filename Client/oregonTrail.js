@@ -1,8 +1,9 @@
 const express = require('express')
 const app = express()
+const port = 3000
 app.use(express.static('public'))
 app.get('/', function (req, res) {
-	res.sendFile('views/index.html', {root: __dirname })
+	res.sendFile('../views/index.html', {root: __dirname }) 
 })
 app.get('/index', function(req, res)  {
 	res.sendFile('/views/index.html', {root: __dirname })
@@ -46,7 +47,7 @@ app.get('/oregonTrail', function (req, res) {
 app.get('/trail',function (req,res)	{
 	res.sendFile('views/Trail.html', {root:__dirname })
 	})
-var game = require('./Controllers/gameController');
+var game = require('./gameController.js');
 
 app.get('/game/getNewGameScreen/:screenId', function (req, res) {
 
@@ -86,7 +87,7 @@ app.get('/game/getSettings', function(req,res) {
 	})
 	
 
-app.get('/Trail/Trail.js', function(req,res) {
+app.get('/Client/Trail.js', function(req,res) {
 	res.setHeader ('Content-Type' , 'application/json');
 	res.send(Trail.getTrail);
 	})
