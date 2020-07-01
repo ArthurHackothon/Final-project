@@ -1,10 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 3000
-app.use(express.static('public'))
-app.get('/', function (req, res) {
-	res.sendFile('../views/index.html', {root: __dirname }) 
-})
+const port = 1337
+
+app.get('/', (req, res) => res.send(index.js))
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:1337`))
+
 app.get('/index', function(req, res)  {
 	res.sendFile('/views/index.html', {root: __dirname })
 })
@@ -93,7 +94,4 @@ app.get('/Client/Trail.js', function(req,res) {
 	})
 
 
-app.listen(1337, function () {
-	console.log('Example app listening on port 1337!')
-	})
 /**/
