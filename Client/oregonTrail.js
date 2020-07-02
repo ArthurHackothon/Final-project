@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 const port = 1337
-
-app.get('/', (req, res) => res.send(index.js))
+app.use(express.static('public'))
+app.get('/', (req, res) => res.send("hello"))
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:1337`))
 
@@ -21,16 +21,17 @@ app.get('/aboutTrail', function (req, res) {
 app.get('/topten', function (req, res) {
 	res.sendFile('/views/topten.html', {root: __dirname })
 })
+/*
 app.get('/topten', function (req, res) {
 	res.sendFile('/JS/topten.js', {root: __dirname })
-})
+})*/
 app.get('/index', function (req, res) {
-	res.sendFile('/JS/index.js', {root: __dirname })
+	res.sendFile('/Client/index.js', {root: __dirname })
 })
 app.get('/mainmenu', function (req, res) {
-	res.sendFile('/JS/mainmenu.js', {root: __dirname })
+	res.sendFile('/Client/mainmenu.js', {root: __dirname })
 })
-app.get('/global', function (req, res) {
+/*app.get('/global', function (req, res) {
 	res.sendFile('public/global.js', {root: __dirname })
 })
 app.get('editor', function (req, res) {
@@ -86,7 +87,7 @@ app.get('/game/getSettings', function(req,res) {
 	res.setHeader ('Content-Type' , 'application/json');
 	res.send(game.gameSettings);
 	})
-	
+	*/
 
 app.get('/Client/Trail.js', function(req,res) {
 	res.setHeader ('Content-Type' , 'application/json');
